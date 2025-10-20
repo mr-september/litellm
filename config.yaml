@@ -1,9 +1,10 @@
 model_list:
-  - model_name: claude-sonnet-4.5-pplx-litellm
+  - model_name: perplexity-claude-sonnet # This is the alias you will use to call the model
     litellm_params:
-      model: perplexity/claude-sonnet-4.5
+      model: claude-4.5-sonnet # The actual model name Perplexity expects
       api_key: os.environ/PERPLEXITY_API_KEY
-
+      api_base: https://api.perplexity.ai
+      
 litellm_settings:
   # Sets the master key for the proxy
   master_key: os.environ/LITELLM_MASTER_KEY
