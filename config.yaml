@@ -1,0 +1,9 @@
+model_list:
+  - model_name: claude-sonnet-4.5-custom  # A custom name you'll use in VS Code
+    litellm_params:
+      model: perplexity/claude-sonnet-4.5
+      api_key: os.environ/PERPLEXITY_API_KEY # Tells LiteLLM to get the key from an environment variable
+
+router_settings:
+    # This enables the /models endpoint which some tools use to list available models
+    enable_models_list: True
